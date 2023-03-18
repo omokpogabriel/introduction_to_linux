@@ -1,5 +1,5 @@
 #introduction to the terminal
-the shortcut to open a terminal is ctrl +alt+T
+the shortcut to open a terminal is <strong> ctrl +alt+T </strong>
 
 A shell is a program that taes command from the leyboard and gives it to the computer to run. it also checks if the commands are syntactically correct.
 
@@ -12,8 +12,7 @@ the most widely use shell is "Bash". other shell applications are Bourne, C shel
 WHAT IS A CONSOLE:
 a console exists in a non gui distribution while terminal exists in a gui distribution
 
-~~
-sudo apt update && sudo apt install terminator
+<code> sudo apt update && sudo apt install terminator </code>
 
 #LINUX COMMAND STRUCTURE
 
@@ -28,11 +27,10 @@ ping -c 1.8.8.8.8
   / - is used to perform a search
   q - to quit the man page
   
-some commands are built in and as such cannot be seen o=in the mna. jsut as cd. for shcuh command, use the help followeed by the command
-'type' command is used to know whether a command is built-in (shell command) or if it is is available in the man page.
+some commands are built in and as such cannot be seen in the man. just as cd. for such command, use the help followed by the command
+<code>type </code> command is used to know whether a command is built-in (shell command) or if it is is available in the man page.
 
-~ a simple trick when it comes to searching for files is to use man -k "the command name or a search string". eg. man -k "copy files" . another option
-    is to use the <code> apropos </code> e.g. apropos ifconfig
+~ a simple trick when it comes to searching for files is to use  <strong> man -k "the command name or a search string" </strong>. eg. <code>man -k "copy files" </strong>. another option is to use the <code> apropos </code> e.g. apropos ifconfig
 
 
 
