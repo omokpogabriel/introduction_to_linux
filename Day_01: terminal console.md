@@ -1,13 +1,13 @@
 # introduction to the terminal
 the shortcut to open a terminal is <strong> ctrl +alt+T </strong>
 
-A shell is a program that taes command from the leyboard and gives it to the computer to run. it also checks if the commands are syntactically correct.
+A shell is a program that takes command from the keyboard and gives it to the computer to run. it also checks if the commands are syntactically correct.
 
 the shell gets started when the user opens or loads a terminal. in essence the shell is xyz@ubuntu20:
 
 The shell is case sensitive
 
-the most widely use shell is "Bash". other shell applications are Bourne, C shell, korn Shell or Z shell
+> the most widely use shell is "Bash". other shell applications are Bourne, C shell, korn Shell or Z shell
 
 # WHAT IS A CONSOLE:
 a console exists in a non gui distribution while terminal exists in a gui distribution
@@ -16,7 +16,7 @@ a console exists in a non gui distribution while terminal exists in a gui distri
 
 # LINUX COMMAND STRUCTURE
 
-ping -c 1.8.8.8.8
+ping -c 1 8.8.8.8
   - ping is the command
   - -c is a command option
   - 1 means we will be pinging only once
