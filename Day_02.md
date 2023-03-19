@@ -32,5 +32,7 @@
   > sudo su - this is used to switch to the root user. To activate the root user account type <code> sudo su - </code>  then run <code> pwd </code> to view the current working directory. To leave the root user account when using sudo su, type exit. use the exit <br/>
   when you run the sudo command, it caches it for 5 minutes. this mewans that it will not ask for password for the if you run the sudo comand within the next 5 minutes. To update this cache type <code> sudo -v </code>. To invalidate the cache thereby making terminal ask for a password next time you run run, type <code> sudo -k </code>.
   
+  > the root directory is designated by the <strong> / </strong>. the <code> /home </code> directory iw where other users are kept
+  
   
   
