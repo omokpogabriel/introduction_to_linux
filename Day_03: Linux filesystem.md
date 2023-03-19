@@ -6,4 +6,4 @@
 
  ### Surmmary of the root files
  
- !["/ of the linux system"](https://prnt.sc/DB1e0mCwTRw4)
+ ![/ of the linux system](https://prnt.sc/DB1e0mCwTRw4)
