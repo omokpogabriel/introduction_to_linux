@@ -23,3 +23,9 @@
   /boot - contains files needed for the system to boot
   /dev - this contains device files for every othe device attached to the system such as teh harddisk or cdrom
   /proc - contains information about the system resouces such as the cpu, memory, etc.
+  /run - this is a tmp system that runs in ram. this directory is used by the system and the contents will disappear on reboot
+
+  ## ABSOLUTE VS RELATIVE PATH
+  > The absolute path is preceeded by a / in the path name while a relative path is preceded by a ./ or ../ in the path name
+
+  
