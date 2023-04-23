@@ -8,7 +8,7 @@
 
 > / is the root directory of the Linux system and this is when all sub directories including external devices are mounted/accessed. th display the file system, run <code> df -h </code>. 
 
-## FIULE SYSTEM HIERARCHY
+## FILE SYSTEM HIERARCHY
   This Linux file sytem hierarchy is:
   / - this is the root direcory
   /bin & /sbin - These directories contains commands such as the ls, file, cim, sudo, e.t.c this directories contaisn all the commands you run in the system
@@ -28,4 +28,12 @@
   ## ABSOLUTE VS RELATIVE PATH
   > The absolute path is preceeded by a / in the path name while a relative path is preceded by a ./ or ../ in the path name
 
-  
+  ## LS COMMAND
+  this command is used to list the files in a directory. eg ls [path1], [path2]
+  Options:
+  * -l: displays the list of the content of a directory include information like priviledges, owner, timestamp of each of the contents
+  * -ld: displays information about the direcgory itself and not its contents
+  * -a: Displays all files including hidden files 
+  * -S: sort by size
+
+
