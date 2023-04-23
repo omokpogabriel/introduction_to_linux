@@ -35,5 +35,14 @@
   * -ld: displays information about the direcgory itself and not its contents
   * -a: Displays all files including hidden files 
   * -S: sort by size
+  * -h: shows file size in human readable format
+  * -X: is used to sort by extension
+  * to hide a certain extension for the result run <code> ls --hide=*.conf </code> where .conf is the extension we want to exclude
+  * -R : list files recursively
 
+  > <code> du -sh [destination] </code> shows the actual size of a file
+
+
+### ASSIGNMENT
+Go through the man page of the ls commnad and write out atleast 40 commands, reciting and remembering them for this new week
 
