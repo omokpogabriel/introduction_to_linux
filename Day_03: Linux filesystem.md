@@ -124,3 +124,5 @@ The <code> mv </code> is used to both move and rename a file.
 you can move and rename a file by giving it a different name in the destination directory
 
 ## REMOVING FILES
+use the <code> rm </code> to remove files. use <code> -f </code> to force a removal without a prompt.
+A better option is to use the <code> shred </code> command which will overwrite the content of the file with raddom values a given number of times before deleting it. for instance <code> shred -vu -n 100 ~/file1.txt </code> the -u means delete after the overwriting 100 times is done
