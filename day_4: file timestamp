@@ -1,1 +1,19 @@
+# FILE TIMESTAMP
+In linux, every file has 3 timestamp:
+1.  atime: This is the access timestamp and it tells you the last time a file was read. the ls equivalent is <code> ls -lu </code>
+2.  mtime: The modified timestamp tell you the last time the content of the time was modified <code> ls -l. ls -lt </code>
+3.  ctime: The changed timestamp tells you the last time the metadatarelated to the file was changed <code> ls -lc </code>
 
+> use the stat command to view all 3 <code> stat /etc/passwd </code>
+
+> The touch command is used to both create a file if it does not exist and change the timestamp for an already existing file.
+    touch -a [file] is used to updated only the access time
+    touch -m [file] is used to change the modified time.
+    Note: the above changes the time to the current system time. To specify a particular time, do:
+    touch -m -t 20181203111230.45 (where the YYYYMMDDHM.S) AND HOUR IS 24. the .S is second
+    touch file1 -r file2 is used to change the timestamp of file1 to file2 
+
+
+
+## ASSIGMENT
+* change the man date for its information on date

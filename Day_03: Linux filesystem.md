@@ -39,10 +39,88 @@
   * -X: is used to sort by extension
   * to hide a certain extension for the result run <code> ls --hide=*.conf </code> where .conf is the extension we want to exclude
   * -R : list files recursively
+  * -t : sort by modification time
+  * -u: sort by access time
+  * -c : sort by change time
+  * --reverse: this will show the result in reversed file name
 
   > <code> du -sh [destination] </code> shows the actual size of a file
+  > <code> ls -l --full-time . </code> this will show the full time information of the list
+
+  ### sorting ls by timestamop
+  - the ls uses the modification time to sort by default
+  * -t : 
 
 
 ### ASSIGNMENT
 Go through the man page of the ls commnad and write out atleast 40 commands, reciting and remembering them for this new week
 
+
+# FILE TIMESTAMP
+In linux, every file has 3 timestamp:
+1.  atime: This is the access timestamp and it tells you the last time a file was read. the ls equivalent is <code> ls -lu </code>
+2.  mtime: The modified timestamp tell you the last time the content of the time was modified <code> ls -l. ls -lt </code>
+3.  ctime: The changed timestamp tells you the last time the metadatarelated to the file was changed <code> ls -lc </code>
+
+> use the stat command to view all 3 <code> stat /etc/passwd </code>
+
+> The touch command is used to both create a file if it does not exist and change the timestamp for an already existing file.
+    touch -a [file] is used to updated only the access time
+    touch -m [file] is used to change the modified time.
+    Note: the above changes the time to the current system time. To specify a particular time, do:
+    touch -m -t 20181203111230.45 (where the YYYYMMDDHM.S) AND HOUR IS 24. the .S is second
+    touch file1 -r file2 is used to change the timestamp of file1 to file2 
+
+
+
+## ASSIGMENT
+* change the man date for its information on date
+
+
+# FILE TYPES IN LINUX
+> Linux does not depend on the extension to know the actual type of file. it determines the type of the file from the file header. the files in the /bin for instance are executable files but di not have an extension unlike the windows file that wuill usually have a .exec attached to it. This does not imply that files in linux do not make use of extensions. It's just that Linux itself does not depend on the extension to know what type of file it is. However, for GUI, openning the file whose content does not match the extension is a major problem
+
+## VIEWING FILES
+> cat: this is used to display file in the terminal window. the syntax is cat -n [destination1 destination2]. The "cat" stands for concatenate and thus can be used to merge to files together result to a new file. e.g. <code> cat /etc/hosts /etc/hosts.conf > my_new_file.txt </code> note the > is called an <Strong> output redirect </Strong> which tells the terminalt o print to a file instead of outputing it.
+
+> less & more : these commands are used to display more of the contents of a file
+    * q: this is used to quit
+    * h: is used to get additional help while in the file
+    * arrow keys : to movve up and down the page
+    * ctrl + f or space key : one window forward
+    * ctrl + b :  to move one window backward
+    * g : to go to the beginning of the file
+    * G : go to the very end of the file
+    * / : used to search for occurence of a string (searches forward)
+    *  ? : used to search for the occurence of a string backward . use n or N to move through the search results
+
+> tail : used to show the last 10 lines of a file.
+  * -n 2 : get the last 2 lines
+  * -n +20: will start showing the last line from a particular line number. In this case, it is line 20 to the end
+  * -f : this will continuously print out new lines in the file that is been tailed. to exit type <code> ctrl + c </code>
+
+> head : this is the opposite of the tail command. it prints the first 10 lines.
+
+>watch : this is used to watch a command.
+
+## CREATING 
+As stated earlier, the <code> touch </code> command is used to create a file
+to create a directory use the <code> mkdir </code> command . Note that the mkdir creates directories from right to left. this implies that when you run <code> mkdir dir1/dir2 </code> the dir1 must exits. In a case where you want to create sub directory from a parent that does not exist, run <code> mkdir -p dir1/dir2/dirs </code>. the -p stands for "parent" and will create the directories as though the parent exists already
+* mkdir -v directoryName. 
+
+## COPYING FILES
+The <code> cp </code> command is used to copy files from one location to the other. Note that the cp will by default create a destination file if it does not exist and will override the content of the destination file if it already exist.
+* -v : this is to verbosse the operation
+* -i : is used to prompt before performing the operation
+* -p : this is used to preserve the priviledges such as group, timestamp and ownership of a file else the user who copied the file becomes the new owner of the copied file with might not be intended during an operation.
+
+* <Strong> Note </Strong> in a case where you want to copy files to a directory, do <i> cp file1 file2 file3 directory/ </i>. this result of this operation is that the files are copied to the directory. If any of these files already exists in the directory then such file in the directory will be overwritten.
+* When you want to copy one directory to another directory add the <code > -r </code> to recursively copy the files in the directory.
+
+## MOVE AND RENAME FILE
+The <code> mv </code> is used to both move and rename a file.
+* -n : use this argument to prevent overriding a file when iot already exists
+*  -u : this ise used to move only new files. i when the source is newer than the destination
+you can move and rename a file by giving it a different name in the destination directory
+
+## REMOVING FILES
