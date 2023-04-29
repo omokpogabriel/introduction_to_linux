@@ -1,0 +1,42 @@
+## VIM
+VIM is a command lint text editor that is widely used. it is gotten from the default vi which was used in the first linux distribution.
+VIM has 3 modes:
+1. command mode: This is the default mode in vim. while in default mode, every character is taken as a command. for instance, typing E makes the cursor move to the end of a line. to enter this mode press the <code> esc </code> button
+2. Insert mode: this is the mode where you enter your text. to enter this mode press the <code> i </code> button
+3. last line mode :  this is the mode where the cursor move to the last line of the page. ener this mode with the <code> : </code>, enabling you to run commands such as :wq
+
+use <code> vimtutor </code> to access the vim tutorial from the shell
+
+### VIM short cuts:
+* E -> move the cursor to the last line in insert mode
+* a -> move the cursor to append new text in insert mode
+* o -> move the cursor to the next line
+* O -> move the cursor to the previous line 
+* I -> move the cursor to the beginning of the line
+* :q! -> quit vim without saving
+* :w! -> save without quitting vim
+* :wq -> same as zz, it saves and quit vim
+* r -> used to enter the replace move
+* :%S/find_word/replace_with_word/g : this command will replace the "find_word" with the replace word
+* :/[search_word] -> used to search the occurence of a word from top down
+* :?[search_word] -> used to search a word bottom to top
+* :[integer] -> move to a particular line number
+* dd -> used to cut
+* y -> used to copy
+* u -> used to undo (same as crtl +z in windows)
+* p -> used to paste before the cursor
+* P -> used to paste after the cursor
+* v -> is used to highlight a word, V used to highlight several lines, crtl +v used to select rectangle lines
+* :set nu -> used to show line numbers
+* :set nonu -> used to turn of line number
+* :syntax on -> used to turn on syntax highlighting
+* :syntax off -> used to turn off syntax highlighting
+* [integer]dd -> used to cut a certain number or line from the cursor
+* gg -> used to move to the beginning of the file
+* g -> used to move to the end of the file
+* :next -> used to move to the next document when vim -o file1 file2 was used to open the present file
+* :prev -> used to move to the previous document when vim -o file1 file2 was used to open the present file
+
+use vim -d file1 file2 to open 2 files to comapre them. them use ctrl +w to navigate either of the file.
+
+<code> vim ~/.vimrc </code> any command saved here will persist
