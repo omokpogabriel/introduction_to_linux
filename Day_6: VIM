@@ -9,34 +9,58 @@ use <code> vimtutor </code> to access the vim tutorial from the shell
 
 ### VIM short cuts:
 * E -> move the cursor to the last line in insert mode
-* a -> move the cursor to append new text in insert mode
+* A -> move the cursor to append new text in insert mode
 * o -> move the cursor to the next line
 * O -> move the cursor to the previous line 
 * I -> move the cursor to the beginning of the line
+* x -> used to delete a character
+* dw -> used to delete a word
+* d$ -> deletes from the position of the cursor to the end of the line
+* [integer]w -> move the cursor a certain number of time like the tab key in windows
+* 0 -> move the cursor to the start of the line
 * :q! -> quit vim without saving
 * :w! -> save without quitting vim
 * :wq -> same as zz, it saves and quit vim
+* J -> used to delete white space
 * r -> used to enter the replace move
 * :%S/find_word/replace_with_word/g : this command will replace the "find_word" with the replace word
 * :/[search_word] -> used to search the occurence of a word from top down
-* :?[search_word] -> used to search a word bottom to top
+* :?[search_word] -> used to search a word bottom to top . use n to find next and N to find previous
 * :[integer] -> move to a particular line number
 * dd -> used to cut
 * y -> used to copy
 * u -> used to undo (same as crtl +z in windows)
 * p -> used to paste before the cursor
 * P -> used to paste after the cursor
-* v -> is used to highlight a word, V used to highlight several lines, crtl +v used to select rectangle lines
+* v -> is used to highlight a word, V used to highlight several lines, crtl +v used to select rectangle lines. this is call VISUAL MODE
 * :set nu -> used to show line numbers
 * :set nonu -> used to turn of line number
 * :syntax on -> used to turn on syntax highlighting
 * :syntax off -> used to turn off syntax highlighting
+* :set ic : ignore case
+* :set hls : highlight all matching phrase
+* :set is: show partial matching for a search phrase
 * [integer]dd -> used to cut a certain number or line from the cursor
+* CTRL + G -> shows your location
 * gg -> used to move to the beginning of the file
-* g -> used to move to the end of the file
+* G -> used to move to the end of the file
+* [integer]G -> move you to a particular line
 * :next -> used to move to the next document when vim -o file1 file2 was used to open the present file
 * :prev -> used to move to the previous document when vim -o file1 file2 was used to open the present file
+* ctrl + o -> takes you back to where you where before the last command and ctrl + i does the opposite
+
 
 use vim -d file1 file2 to open 2 files to comapre them. them use ctrl +w to navigate either of the file.
 
-<code> vim ~/.vimrc </code> any command saved here will persist
+<code> vim ~/.vimrc </code> any command saved here will persist.
+
+if you have a swap issue, do a rm on the swap and you will be fine
+
+## VIMTUTOR
+
+        ^
+        k
+  < h       l >      The navigation keys
+        j
+        v
+
