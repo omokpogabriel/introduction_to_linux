@@ -1,0 +1,51 @@
+# What is wget
+wget is a non-interactivefree utility used for retrieving and downloading files over the internet. It is called non interative because it an run in the background unlike browsers that require constant interation by the user. it supports HTTP, FTP, and HTTPS protocols.
+
+wget can recreate the directories over the web on the local machine and was built for robustness in stable networks.
+
+the easiest way to use wget is 
+* wget [complete-url-link]
+* wget [options...] [url...]
+
+## basic startup options
+* wget -V or wget --version : displays the wget version
+* wget -h or wget --help : displays the help options for wget
+* wget -b or wget --background : runs wget in background mode. if no output file is specified via the -o, output is redirected to wget-log
+
+## loging anf input file options
+* -o logfile or --oupt-file=logfile : logs messages to the specified logfile
+* -a logfile -r --append-output=logfile : appends to the logfile
+* -q or --quite : turns off all wget messages
+* -v or --verbose : this is the default. it prints out all the available data
+* -nv or --non-verbose : opposite of verbose
+* -i file or --input-file=file : reads urls from a local or external file
+* -F or --force-html : when input is read from a file, fource it to be read as html
+* --config=file : specify the location of a startup file you want to use
+
+## Download options
+* -t number or tries=number : set the number of retries. 0 is infinite retries. The default is 20
+* -O file or --output-document=file : documents are not written to their appropriate files. they are instead concatenated as one file
+* -nc or --no-clobbering : When running wget without -N, -nc or -r, downloading the same file in the same directory results in the original copy of the file being preserved and the second copy being name file.1. When you specify -nc, this behavopur is suppresssed and wget refuses to download newer copies of the file.
+* -c or --continue : starts downloading an incomplete download from where it left off instead of restarting from the very beginning.
+* --progress=type : possible types are dot and bar
+* -N or timestamping : turn on time stamping. the output has a timestamp matching remote copy; if file already exists locally and remote file is nit newer, no download occurs.
+* --no-use-server-timestamp : don;t set the local file's timestamp by the one on the server.
+* -S or --server-response : prints the headers sent by HTTP servers and reponses send by ftp servers
+* --spider : when invoked with this option, wget only checks if the files are there but does not download them.
+* -T seconds or --timeout=seconds : this sets the network timeout to seconds. This option is equivalent to specifying --dns-timeout, --connect-timeout, and --read-timeout, all at the same time
+* --dns-timeout : Sets the DNS lookup timeout to seconds
+* --connect-timeout=seconds : sets the TCP connect timeout to seconds
+* --read-timeout=seconds : set the read (and write) timeout to seconds
+* limit-rate=amount : Limits the download speed to amount in bytes, kilobyes (3kb), megabytes (3m).
+* -w seconds or --wait=seconds : wait the specified number of seconds between the retrieval. wget can wait for the specified time before making the retrieval.
+* --waitretry=seconds : if you don't want wget to wait beween every retrieval, but only wait between retries of failed downloads, you can use this options
+* --no-proxy : don'e use proxies, even if the appropriate *_proxy environment variable is defined.
+* -4, --inet4-only or -6, --inet6-only : force connectinf to IPv4 or IPv6 addresses. 
+* --retry-connfused : consider "connection refused" a transient error and try again.
+* --user=user, --password=password: specify the username user and password for both FTP and HTTP file retrieval.
+* --ask-password : prompts for a password for each connection established. 
+* --local-encoding=encoding : force wget to use encodingas teh default system encoding
+* --remote-encoding=encoding : Force wget to use encoding as teh defaulr remove server encoding
+* --unlink : Force wget to unlink file instead of clobbering existing file. This option is useful for downloading to the directory with hardlinks.
+
+

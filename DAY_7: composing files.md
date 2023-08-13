@@ -16,3 +16,21 @@ e.g. <code> tar -czvf old-file.tar.gz /etc/ </code>
 <Strong> To extract an achieve to another directory add the -C flag. e.g tar -xjvf etc.tar.bz2 -C ~/my_backup</Strong>
 
 to create an auto backup use <code> tar -cjvf etc.$(date +%F).tar.bz2 /etc
+
+
+# /ETC/PASSWD AND THE /ETC/SHADOW FILES
+
+## /etc/passwd
+the /etc/passwd file show information about each Account user. the format is: root:*:0:0:System Administrator:/var/root:/bin/sh
+root : this is the logged in user
+* : indicates the user password which is saved in the shadow file
+* 0 : the user id
+* 0 : the user group
+* System Administrator : is the comment
+* /var/root : the users home directory
+* /bin/sh : default shell. if this is false or empty it means that the user is not allowed to login into the system
+
+## /etc/shadow
+ this file stores the actual password of the user in an encrypted format. This is only readable by the root account. each line contains 9 comma seperated fields. checkout "man shadow" for more details
+
+

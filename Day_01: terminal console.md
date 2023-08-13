@@ -21,7 +21,7 @@ ping -c 1 8.8.8.8
   - -c is a command option
   - 1 means we will be pinging only once
   
-  > The man page - This command is used to get help. the fulll meaning is manual page and the example is ~~~~~~ man [command] e.g man ls
+  > The man page - This command is used to get help. the full meaning is "manual page" and the example is: man [command] e.g man ls
    * g - this is used to move to the beginning of the man page
    * G - used to move to the end
    * / - is used to perform a search
